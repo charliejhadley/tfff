@@ -33,7 +33,7 @@ use_data(tfff_offices,
 
 oregon_siskiyou_counties_geospatial <- counties(state = c("OR", "CA")) %>%
   clean_names() %>%
-  filter(statefp == 41 | name == "Siskiyou") %>%
+  filter(statefp == "41" | name == "Siskiyou") %>%
   mutate(state = case_when(
     statefp == 41 ~ "Oregon",
     TRUE ~ "California"
